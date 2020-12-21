@@ -133,6 +133,9 @@ func (g *OpenAPIv3Generator) addPathsToDocumentV3(d *v3.Document, file *protogen
 			var body string
 			if extension != nil {
 				rule := extension.(*annotations.HttpRule)
+				if rule == nil {
+					continue
+				}
 				body = rule.Body
 				switch pattern := rule.Pattern.(type) {
 				case *annotations.HttpRule_Get:
