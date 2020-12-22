@@ -1,4 +1,4 @@
-module github.com/googleapis/gnostic
+module github.com/kentik/gnostic
 
 go 1.12
 
